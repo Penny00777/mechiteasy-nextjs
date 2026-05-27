@@ -3,12 +3,12 @@ import './globals.css';
 import ClientLayout from '@/components/ClientLayout';
 
 export const metadata: Metadata = {
-  title: ' ',
+  title: 'Mech It Easy | STEM Kits Nepal',
   description:
     'Empowering the next generation of engineers in Nepal through hands-on STEM kits and professional digital fabrication labs. We make science something you can hold.',
   keywords:
     'STEM kits Nepal, 3D printing Nepal, Engineering Labs, Mech It Easy, Aakaran Tech, Robotics Nepal',
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://mechiteasy.com'),
   openGraph: {
     type: 'website',
     title: 'Mech It Easy | STEM Kits & Engineering Labs',

@@ -36,24 +36,7 @@ export default function WhoWeAreSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white dark:via-slate-950/40 dark:to-slate-950"></div>
             </div>
 
-            <div className="relative z-10 py-16 lg:pt-24 lg:pb-24">
-                <div className="relative mx-auto max-w-7xl px-4 lg:px-8 mb-12">
-                    <div ref={headerRef} className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                        <div className="space-y-8 flex flex-col items-center">
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-100 dark:border-emerald-800/30 shadow-sm">
-                                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">Who Are We?</span>
-                            </div>
-                            <h2 className="text-4xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tighter leading-[0.95] uppercase">
-                                Engineers on a mission <br /> to change how <span className="text-emerald-500">Nepal learns.</span>
-                            </h2>
-                            <div className="h-[1.5px] w-24 bg-emerald-500/30 rounded-full" />
-                            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-medium">
-                                We&apos;re Aakaran Tech — a Nepal-based team of engineering graduates with hands-on experience in 3D printing, laser cutting, and CNC machining. What started as a fabrication service has grown into a mission: making science and math tangible for every Nepali classroom.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div className="relative z-10 pt-4 pb-16 lg:pt-8 lg:pb-24">
 
                 <div className="w-full bg-[rgba(197,236,244,0.5)] dark:bg-blue-900/10 py-16 mb-12 border-y border-white/20 relative">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-12 relative z-10">

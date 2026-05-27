@@ -18,6 +18,7 @@ interface SocialLink {
 
 const navItems: NavItem[] = [
   { to: '/', label: 'Home' },
+  { to: '/about-us', label: 'About Us' },
   { to: '/mech-it-easy-kits', label: 'Mech It Easy Kits' },
   { to: '/mech-it-easy-labs', label: 'Mech It Easy Labs' },
   { to: '/contact', label: 'Contact' },

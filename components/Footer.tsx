@@ -25,6 +25,7 @@ export default function Footer() {
       title: 'Company',
       links: [
         { label: 'Home', to: '/' },
+        { label: 'About Us', to: '/about-us' },
         { label: 'Kits', to: '/mech-it-easy-kits' },
         { label: 'Labs', to: '/mech-it-easy-labs' },
         { label: 'Contact', to: '/contact' },
