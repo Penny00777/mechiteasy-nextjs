@@ -130,7 +130,7 @@ export default function VisionGoalsSection() {
                                         </span>
                                     </div>
                                     <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:border-blue-500">
-                                        <img src="/vision-educator.png" alt="Educator" className="w-full h-full object-cover" />
+                                        <img src="/images/home/vision-educator.png" alt="Educator" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="absolute -bottom-2 h-10 w-10 rounded-xl bg-blue-600 text-white shadow-xl flex items-center justify-center">
                                         <HiOutlineUserGroup className="h-5 w-5" />
@@ -147,7 +147,7 @@ export default function VisionGoalsSection() {
                                         </span>
                                     </div>
                                     <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:border-sky-500">
-                                        <img src="/vision-3d-printing.png" alt="Digital Tools" className="w-full h-full object-cover" />
+                                        <img src="/images/home/vision-3d-printing.png" alt="Digital Tools" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="absolute -bottom-2 h-10 w-10 rounded-xl bg-sky-600 text-white shadow-xl flex items-center justify-center">
                                         <HiOutlineCpuChip className="h-5 w-5" />
@@ -164,7 +164,7 @@ export default function VisionGoalsSection() {
                                         </span>
                                     </div>
                                     <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:border-emerald-500">
-                                        <img src="/vision-learning.png" alt="Learning" className="w-full h-full object-cover" />
+                                        <img src="/images/home/vision-learning.png" alt="Learning" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="absolute -bottom-2 h-10 w-10 rounded-xl bg-emerald-600 text-white shadow-xl flex items-center justify-center">
                                         <HiOutlineLightBulb className="h-5 w-5" />

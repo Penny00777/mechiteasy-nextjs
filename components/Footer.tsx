@@ -18,7 +18,7 @@ interface FooterSection {
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const logoSrc = '/handshakelogo.png';
+  const logoSrc = '/logos/handshake-logo.png';
 
   const footerLinks: FooterSection[] = [
     {

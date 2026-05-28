@@ -48,7 +48,7 @@ export default function Navbar() {
   const navPillsRef = useRef<HTMLDivElement>(null);
   const [indicatorStyle, setIndicatorStyle] = useState<IndicatorStyle | null>(null);
 
-  const logoSrc = '/whitered_logo_nobg.png';
+  const logoSrc = '/logos/white-red-logo-no-bg.png';
 
   useEffect(() => {
     if (!navPillsRef.current) return;

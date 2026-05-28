@@ -11,7 +11,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
         'functional-products': {
             title: 'Custom Designed and Printed Parts',
             description: 'Solving real-world problems with custom 3D printed functional parts.',
-            folder: 'Functional Products/Functional Products',
+            folder: 'images/categories/functional-products',
             blogContent: `
                 <div class="space-y-6 text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
                     <p>We tackle a vast array of functional consumer needs. For example, we faced a problem of venting out the toxic fumes produced by our resin printer, so we designed a custom exhaust adapter. This adapter houses the exhaust fan and attaches directly to the printer's backside, with a pipe that safely directs the toxic fumes outside through ventilation. This was a necessary custom solution designed for our first SLA 3D printer.</p>
@@ -29,7 +29,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
         'lithophane-lamps': {
             title: 'Lithophane-Based Custom Lamps',
             description: 'Personalized glowing photo frames acting as aesthetic study lamps.',
-            folder: 'Lithophane Photo Frame Lamps/Lithophane Photo Frame Lamps',
+            folder: 'images/categories/lithophane-photo-frame-lamps',
             blogContent: `
                 <div class="space-y-6 text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
                     <p>Our custom resin-printed lithophane lamps are a unique way to bring memories to light. Each lamp houses a highly detailed, 3D printed lithophane photo frame that is illuminated by an internal LED bulb. When the LED glows, the varying thicknesses of the resin reveal the customer's chosen image beautifully.</p>
@@ -41,7 +41,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
         'master-molds': {
             title: 'Design and Fabrication of Molds',
             description: 'High-detail resin-printed master molds for various casting applications.',
-            folder: 'MASTER MOLDS/MASTER MOLDS',
+            folder: 'images/categories/master-molds',
             blogContent: `
                 <div class="space-y-6 text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
                     <p>Whether it's for culinary arts or industrial casting, precision is key. For one of our customers, we designed custom chocolate shaper molds. The customer wanted a mold which would help him pour-mold his chocolates into specific shapes. We designed the mold in Fusion 360 precisely to their dimensional and shape requirements. As this required perfect surface detailing, we proceeded with SLA resin printing and delivered a high-fidelity master.</p>
@@ -54,7 +54,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
         'customization-design-help': {
             title: 'Design Modifications and DIY Help',
             description: 'Consultation, CAD redesigns, and component sourcing for DIY projects.',
-            folder: 'Customisation Design Help/Customisation Design Help',
+            folder: 'images/categories/customisation-design-help',
             blogContent: `
                 <div class="space-y-6 text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
                     <p>We regularly consult our customers for design changes and 3D printing requirements, helping them understand the engineering constraints of their projects and choose what kind of 3D printing (SLA or FDM) will be most suitable for their specific needs.</p>
@@ -66,7 +66,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
         'collectibles-and-figures': {
             title: 'SLA Printed Miniatures and Other Items',
             description: 'High-resolution resin prints of complex characters and figures.',
-            folder: 'Collectibles and Figures/anime characters and miscellaneous',
+            folder: 'images/categories/collectibles-and-figures/anime-characters-and-miscellaneous',
             blogContent: `
                 <div class="space-y-6 text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
                     <p>Using high-resolution SLA resin printing, we have brought countless characters and models into the physical world. We have successfully printed several complex anime characters, Warhammer miniatures, and other intricate PC game character 3D models.</p>
@@ -78,7 +78,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
         'stem-kits-development': {
             title: 'STEM Kits Development',
             description: 'Educational kits and mechanical assemblies.',
-            folder: 'Mech it easy Kits/Mech it easy Kits',
+            folder: 'images/categories/mech-it-easy-kits',
             blogContent: `
                 <div class="space-y-6 text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
                     <p>We are constantly developing educational STEM kits to help students grasp complex mechanical and scientific principles in a hands-on way.</p>
@@ -118,7 +118,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
                 .map(file => '/' + data.folder + '/' + file);
                 
             if (slug === 'master-molds') {
-                const chocoDir = path.join(targetDir, 'CHOCOLATE MOLDS');
+                const chocoDir = path.join(targetDir, 'chocolate-molds');
                 if (fs.existsSync(chocoDir)) {
                     const chocoFiles = fs.readdirSync(chocoDir);
                     const chocoImages = chocoFiles
@@ -126,7 +126,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
                             const l = file.toLowerCase();
                             return l.endsWith('.jpg') || l.endsWith('.png') || l.endsWith('.jpeg') || l.endsWith('.webp') || l.endsWith('.avif');
                         })
-                        .map(file => '/' + data.folder + '/CHOCOLATE MOLDS/' + file);
+                        .map(file => '/' + data.folder + '/chocolate-molds/' + file);
                     images = [...images, ...chocoImages];
                 }
             }

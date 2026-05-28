@@ -24,9 +24,9 @@ export default function WhoWeAreSection() {
     const { ref: statsRef, inView: statsInView } = useInView({ threshold: 0.1, triggerOnce: true });
 
     const cards: CardData[] = [
-        { label: "CORE STRENGTH", heading: "Engineering Foundation", description: "Professional experience in Digital fabrication, Prototyping, Product Development and Technical tutoring.", icon: <HiOutlineAcademicCap />, tag: "Digital Fabrication", video: "/timelapse1.mp4" },
-        { label: "PROVEN EXPERTISE", heading: "Manufacturing & Design", description: "Designing functional mechanical parts, molds, enclosures, and customized products.", icon: <HiOutlineCog />, tag: "3D Print Time-lapse", video: "/design and manufacturing.mp4" },
-        { label: "STRATEGIC IMPACT", heading: "Institutional Success", description: "Equipped engineering college with fully operational FDM, SLA based 3D printer and desktop CNC end to end.", icon: <HiOutlineBeaker />, tag: "Installed Lab", video: "/institutional success 2.mp4" }
+        { label: "CORE STRENGTH", heading: "Engineering Foundation", description: "Professional experience in Digital fabrication, Prototyping, Product Development and Technical tutoring.", icon: <HiOutlineAcademicCap />, tag: "Digital Fabrication", video: "/videos/timelapse-1.mp4" },
+        { label: "PROVEN EXPERTISE", heading: "Manufacturing & Design", description: "Designing functional mechanical parts, molds, enclosures, and customized products.", icon: <HiOutlineCog />, tag: "3D Print Time-lapse", video: "/videos/design-and-manufacturing.mp4" },
+        { label: "STRATEGIC IMPACT", heading: "Institutional Success", description: "Equipped engineering college with fully operational FDM, SLA based 3D printer and desktop CNC end to end.", icon: <HiOutlineBeaker />, tag: "Installed Lab", video: "/videos/institutional-success-2.mp4" }
     ];
 
     return (

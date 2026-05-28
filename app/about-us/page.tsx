@@ -71,28 +71,29 @@ export default function AboutUsPage() {
 
     const productsData = [
         {
-            title: "Collectibles and Figures",
-            slug: "collectibles-and-figures"
-        },
-        {
-            title: "Customization Design Help",
-            slug: "customization-design-help"
+            title: "STEM Kits Development",
+            slug: "stem-kits-development"
         },
         {
             title: "Functional Products",
             slug: "functional-products"
         },
         {
-            title: "Lithophane-based Custom Lamps",
-            slug: "lithophane-lamps"
+            title: "Customization Design Help",
+            slug: "customization-design-help"
         },
         {
+
             title: "Master Molds",
             slug: "master-molds"
         },
         {
-            title: "STEM Kits Development",
-            slug: "stem-kits-development"
+            title: "Lithophane-based Custom Lamps",
+            slug: "lithophane-lamps"
+        },
+        {
+            title: "Collectibles and Figures",
+            slug: "collectibles-and-figures"
         }
     ];
 

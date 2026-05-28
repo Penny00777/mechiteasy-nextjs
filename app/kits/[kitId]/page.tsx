@@ -218,7 +218,7 @@ export default function KitDetails() {
                     {kit.learningMedia?.type === 'video' ? (
                       <video src={kit.learningMedia.src} autoPlay loop muted playsInline className="h-full w-full object-cover transition-transform duration-700 group-hover/gif:scale-110" />
                     ) : (
-                      <img src={kit.learningMedia?.src || "/ledHandcrankgen-ezgif.com-rotate.gif"} alt="Hands-on Learning Experience" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover/gif:scale-110" />
+                      <img src={kit.learningMedia?.src || "/gifs/led-hand-crank-gen.gif"} alt="Hands-on Learning Experience" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover/gif:scale-110" />
                     )}
                     <div className="hidden flex-col items-center justify-center text-slate-400 p-8 text-center space-y-4">
                       <div className="h-12 w-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center"><FiPlay className="h-8 w-8 opacity-20" /></div>

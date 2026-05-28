@@ -59,8 +59,8 @@ export const kitsData: Record<string, KitData> = {
   'hand-crank-generator': {
     name: 'Hand Crank Generator STEM Kit',
     subTitle: 'Grade 9–10 Focus',
-    images: ['/hand-crank-generator.png'],
-    learningMedia: { type: 'image', src: '/ledHandcrankgen-ezgif.com-rotate.gif' },
+    images: ['/images/education/hand-crank-generator.png'],
+    learningMedia: { type: 'image', src: '/gifs/led-hand-crank-gen.gif' },
     Icon: FiZap,
     gradeLevel: 'Grades 9-10',
     subject: 'Physics, Engineering',
@@ -102,8 +102,8 @@ export const kitsData: Record<string, KitData> = {
   'math-exploration-kit': {
     name: 'Math Exploration Kit',
     subTitle: 'Grade 8–10 Mathematics Focus',
-    images: ['/homeimg4.png'],
-    learningMedia: { type: 'video', src: '/mathexplorationgif.mp4' },
+    images: ['/images/home/home-4.png'],
+    learningMedia: { type: 'video', src: '/videos/math-exploration.mp4' },
     Icon: FiActivity,
     gradeLevel: 'Grades 8-10',
     subject: 'Mathematics, Algebra, Trigonometry',
@@ -136,7 +136,7 @@ export const kitsData: Record<string, KitData> = {
   'hydraulic-scissor-lift': {
     name: 'Hydraulic Scissor Lift Kit',
     subTitle: "Pascal's Principle & Fluid Power",
-    image: '/homeimg4.jpg',
+    image: '/images/home/home-4.png',
     Icon: FiMove,
     gradeLevel: 'Middle - High School',
     subject: 'Fluid Mechanics, Engineering',

@@ -17,9 +17,9 @@ function useInViewOnce(options?: IntersectionObserverInit) {
 export default function MakeAKit() {
   const [headerRef, headerInView] = useInViewOnce({ threshold: 0.15 });
   const steps = [
-    { id: 1, title: 'Download', description: 'Pick a classroom-ready project file from our curated library—no CAD experience needed. Each file is tagged by subject and difficulty.', image: '/homeimg1.avif' },
-    { id: 2, title: 'Print & build', description: 'Send it to a 3D printer or use our printable templates. Students clip, screw, or snap parts together following clear visual instructions.', image: '/homeimg2.avif' },
-    { id: 3, title: 'Learn & have fun', description: 'Run quick experiments, tweak variables, and encourage "what if?" questions—turning each print into a mini-lab in your classroom.', image: '/homeimg3.webp' },
+    { id: 1, title: 'Download', description: 'Pick a classroom-ready project file from our curated library—no CAD experience needed. Each file is tagged by subject and difficulty.', image: '/images/home/home-1.avif' },
+    { id: 2, title: 'Print & build', description: 'Send it to a 3D printer or use our printable templates. Students clip, screw, or snap parts together following clear visual instructions.', image: '/images/home/home-2.avif' },
+    { id: 3, title: 'Learn & have fun', description: 'Run quick experiments, tweak variables, and encourage "what if?" questions—turning each print into a mini-lab in your classroom.', image: '/images/home/home-3.webp' },
   ];
 
   return (
