@@ -59,7 +59,7 @@ export const kitsData: Record<string, KitData> = {
   'hand-crank-generator': {
     name: 'Hand Crank Generator STEM Kit',
     subTitle: 'Grade 9–10 Focus',
-    images: ['/images/education/hand-crank-generator.png'],
+    images: ['/images/education/hand-crank-generator.webp'],
     learningMedia: { type: 'image', src: '/gifs/led-hand-crank-gen.gif' },
     Icon: FiZap,
     gradeLevel: 'Grades 9-10',
@@ -102,8 +102,8 @@ export const kitsData: Record<string, KitData> = {
   'math-exploration-kit': {
     name: 'Math Exploration Kit',
     subTitle: 'Grade 8–10 Mathematics Focus',
-    images: ['/images/home/home-4.png'],
-    learningMedia: { type: 'video', src: '/videos/math-exploration.mp4' },
+    images: ['/images/home/home-4.webp'],
+    learningMedia: { type: 'video', src: 'https://3pz2dqcs9ado1sdm.public.blob.vercel-storage.com/videos/math-exploration.mp4' },
     Icon: FiActivity,
     gradeLevel: 'Grades 8-10',
     subject: 'Mathematics, Algebra, Trigonometry',
@@ -136,7 +136,7 @@ export const kitsData: Record<string, KitData> = {
   'hydraulic-scissor-lift': {
     name: 'Hydraulic Scissor Lift Kit',
     subTitle: "Pascal's Principle & Fluid Power",
-    image: '/images/home/home-4.png',
+    image: '/images/home/home-4.webp',
     Icon: FiMove,
     gradeLevel: 'Middle - High School',
     subject: 'Fluid Mechanics, Engineering',

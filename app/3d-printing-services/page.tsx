@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import React from 'react';
 
@@ -66,7 +67,7 @@ export default function ThreeDPrintingServices() {
               </div>
               <div className="flex flex-col gap-3">
                 <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 p-2 shadow-inner dark:border-slate-800 dark:bg-slate-900">
-                  <img src="/images/labs/3d-printing-lab.png" alt="Phase 1 Fabrication" loading="lazy" className="aspect-[16/9] w-full rounded-xl object-cover" />
+                  <Image width={800} height={600} src="/images/labs/3d-printing-lab.webp" alt="Phase 1 Fabrication" loading="lazy" className="aspect-[16/9] w-full rounded-xl object-cover" />
                 </div>
               </div>
             </div>
@@ -85,7 +86,7 @@ export default function ThreeDPrintingServices() {
               </div>
               <div className="flex flex-col gap-3">
                 <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 p-2 shadow-inner dark:border-slate-800 dark:bg-slate-900">
-                  <img src="/images/labs/lab-setup-1.jpeg" alt="Phase 2 Lab Setup" loading="lazy" className="aspect-[16/9] w-full rounded-xl object-cover" />
+                  <Image width={800} height={600} src="/images/labs/lab-setup-1.webp" alt="Phase 2 Lab Setup" loading="lazy" className="aspect-[16/9] w-full rounded-xl object-cover" />
                 </div>
               </div>
             </div>

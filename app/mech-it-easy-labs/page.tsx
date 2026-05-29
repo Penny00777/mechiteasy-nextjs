@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -15,7 +16,7 @@ const ImageSlider = ({ images }: { images: SliderImage[] }) => {
   return (
     <div className="relative group overflow-hidden rounded-2xl border-2 border-slate-200 bg-slate-100 shadow-lg dark:border-slate-800 aspect-[4/3] w-full transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.6),0_0_40px_-10px_rgba(59,130,246,0.6)] hover:border-emerald-500 dark:hover:border-emerald-400">
       <div className="flex h-full w-full transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${current * 100}%)` }}>
-        {images.map((img, idx) => (<img key={idx} src={img.src} alt={img.alt} className="h-full w-full flex-shrink-0 object-cover" />))}
+        {images.map((img, idx) => (<Image width={800} height={600} key={idx} src={img.src} alt={img.alt} className="h-full w-full flex-shrink-0 object-cover" />))}
       </div>
       <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); prev(); }} className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white opacity-0 backdrop-blur transition-opacity group-hover:opacity-100 hover:bg-white/40 z-10"><HiChevronLeft className="h-6 w-6" /></button>
       <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); next(); }} className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white opacity-0 backdrop-blur transition-opacity group-hover:opacity-100 hover:bg-white/40 z-10"><HiChevronRight className="h-6 w-6" /></button>
@@ -44,17 +45,17 @@ export default function MechItEasyLabs() {
   const router = useRouter();
 
   const labImages: SliderImage[] = [
-    { src: "/images/labs/3d-printing-lab.png", alt: "3D Printing Lab Setup" },
-    { src: "/images/labs/lab-setup-1.jpeg", alt: "Lab Setup 1" },
-    { src: "/images/labs/lab-setup-2.jpeg", alt: "Lab Setup 2" },
-    { src: "/images/labs/lab-setup-3.jpeg", alt: "Lab Setup 3" },
-    { src: "/images/labs/lab-setup-4.jpeg", alt: "Lab Setup 4" },
+    { src: "/images/labs/3d-printing-lab.webp", alt: "3D Printing Lab Setup" },
+    { src: "/images/labs/lab-setup-1.webp", alt: "Lab Setup 1" },
+    { src: "/images/labs/lab-setup-2.webp", alt: "Lab Setup 2" },
+    { src: "/images/labs/lab-setup-3.webp", alt: "Lab Setup 3" },
+    { src: "/images/labs/lab-setup-4.webp", alt: "Lab Setup 4" },
   ];
   const classImages: SliderImage[] = [
-    { src: "/images/labs/lab-setup-2.jpeg", alt: "Digital Fabrication Class 1" },
+    { src: "/images/labs/lab-setup-2.webp", alt: "Digital Fabrication Class 1" },
     { src: "/images/home/home-1.avif", alt: "Students Learning" },
     { src: "/images/home/home-2.avif", alt: "Hands-on Training" },
-    { src: "/images/labs/lab-setup-4.jpeg", alt: "Design Session" },
+    { src: "/images/labs/lab-setup-4.webp", alt: "Design Session" },
   ];
 
   return (
@@ -63,7 +64,7 @@ export default function MechItEasyLabs() {
         <div ref={labRef as React.RefObject<HTMLDivElement>} className={`mx-auto max-w-6xl rounded-3xl border border-slate-200 bg-gradient-to-br from-white/85 via-white/70 to-slate-50/70 p-8 shadow-[0_24px_60px_rgba(15,23,42,0.12)] backdrop-blur transform transition-all duration-700 dark:border-slate-800/80 dark:from-slate-950/70 dark:via-slate-950/55 dark:to-slate-900/40 ${labInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="flex flex-col gap-8">
             <div onClick={() => router.push('/contact')} className="relative group overflow-hidden rounded-[2.5rem] border border-slate-200 bg-slate-100 shadow-2xl dark:border-slate-800 transition-all duration-500 hover:shadow-emerald-500/20 cursor-pointer">
-              <img src="/images/labs/3d-printing-lab.png" alt="3D Printing Lab Setup" className="w-full aspect-[21/9] object-cover transition-transform duration-1000 group-hover:scale-105" />
+              <Image width={800} height={600} src="/images/labs/3d-printing-lab.webp" alt="3D Printing Lab Setup" className="w-full aspect-[21/9] object-cover transition-transform duration-1000 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-8 sm:p-12 text-left">
                 <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white mb-4">

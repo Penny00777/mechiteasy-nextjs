@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
     HiOutlineLightBulb,
     HiOutlineCpuChip,
@@ -51,21 +52,20 @@ export default function AboutUsPage() {
 
     const timelineData = [
         {
-            time: "7+ months",
-            desc: "Supplier sourcing, machine import, resin printing mastery, custom product problem solving - STL edits, painting etc."
+            time: "6+ months",
+            desc: "Mastered supply chain logistics, equipment procurement, and advanced custom 3D printing solutions."
         },
         {
             time: "2 months",
-            desc: "Proper marketing and sales focused - around 2 lakhs of products sold."
+            desc: "Scaled marketing and sales operations, successfully distributing products to a wide market."
         },
         {
             time: "Change in Focus",
             desc: "Transitioning toward broader educational impact."
         },
-
         {
             time: "Next 6 months",
-            desc: "Targeting 15+ schools in Kathmandu valley and successfully implementing Mech It Easy."
+            desc: "Implementing Mech It Easy in 15+ schools across the Kathmandu Valley."
         }
     ];
 
@@ -147,9 +147,9 @@ export default function AboutUsPage() {
                 {/* Phase 1 Section */}
                 <div
                     ref={phase1Ref as React.RefObject<HTMLDivElement>}
-                    className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start transition-all duration-1000 ${phase1InView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                    className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start transition-all duration-1000 ${phase1InView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
                 >
-                    <div className="lg:col-span-5 space-y-8 sticky top-32">
+                    <div className="lg:col-span-5 space-y-10 sticky top-32">
                         <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-sky-100 dark:bg-sky-900/30 text-sky-600 dark:text-sky-400 mb-2 border border-sky-200 dark:border-sky-800/50 shadow-sm">
                             <HiOutlineCube className="h-8 w-8" />
                         </div>
@@ -160,13 +160,13 @@ export default function AboutUsPage() {
                             We began as a full-service 3D printing and product development company. Named <strong>Aakaran</strong>—meaning "giving imagination its shape"—we worked closely with clients to turn ideas into functional, manufacturable products.
                         </p>
 
-                        <div className="p-6 rounded-2xl bg-sky-50 dark:bg-slate-800/50 border border-sky-100 dark:border-slate-700/50">
-                            <h4 className="font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-widest text-xs text-sky-600 dark:text-sky-400">Key Services & Capabilities</h4>
-                            <ul className="space-y-3">
+                        <div className="p-8 rounded-2xl bg-sky-50 dark:bg-slate-800/50 border border-sky-100 dark:border-slate-700/50 mt-6">
+                            <h4 className="font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest text-xs text-sky-600 dark:text-sky-400">Key Services & Capabilities</h4>
+                            <ul className="space-y-4">
                                 {['Custom 3D printing (FDM & resin).', 'Rapid prototyping for functional & aesthetic parts.', 'Design-for-manufacturing (DFM) Guidance.'].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-                                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0" />
-                                        <span>{item}</span>
+                                    <li key={i} className="flex items-start gap-4 text-slate-700 dark:text-slate-300">
+                                        <div className="mt-2 w-2 h-2 rounded-full bg-sky-500 shrink-0" />
+                                        <span className="leading-relaxed">{item}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -175,25 +175,25 @@ export default function AboutUsPage() {
 
                     <div
                         ref={productsRef as React.RefObject<HTMLDivElement>}
-                        className={`lg:col-span-7 space-y-6 transition-all duration-1000 delay-300 ${productsInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
+                        className={`lg:col-span-7 space-y-8 transition-all duration-1000 delay-300 ${productsInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
                     >
-                        <h4 className="text-xl font-black text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-4">
+                        <h4 className="text-xl font-black text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-6">
                             Notable Work & Products
                         </h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {productsData.map((product, idx) => (
-                                <Link href={`/work/${product.slug}`} key={idx}>
-                                    <div className="p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-sky-300 dark:hover:border-sky-700/50 hover:shadow-lg transition-all duration-300 group cursor-pointer h-full">
-                                        <div className="h-10 w-10 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-500 group-hover:text-sky-500 group-hover:bg-sky-50 dark:group-hover:bg-sky-900/30 transition-colors mb-4">
-                                            <HiOutlineWrenchScrewdriver className="h-5 w-5" />
+                                <Link href={`/work/${product.slug}`} key={idx} className="block h-full">
+                                    <div className="p-8 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-sky-300 dark:hover:border-sky-700/50 hover:shadow-lg transition-all duration-300 group cursor-pointer h-full flex flex-col items-start justify-start">
+                                        <div className="h-12 w-12 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-500 group-hover:text-sky-500 group-hover:bg-sky-50 dark:group-hover:bg-sky-900/30 transition-colors mb-6 shrink-0">
+                                            <HiOutlineWrenchScrewdriver className="h-6 w-6" />
                                         </div>
-                                        <h5 className="font-bold text-slate-900 dark:text-white mb-2">{product.title}</h5>
+                                        <h5 className="font-bold text-slate-900 dark:text-white leading-snug">{product.title}</h5>
                                     </div>
                                 </Link>
                             ))}
                         </div>
-                        <div className="mt-6 p-6 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-lg">
-                            <p className="font-medium">
+                        <div className="mt-8 p-8 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-lg">
+                            <p className="font-medium leading-relaxed">
                                 This phase built strong expertise in 3D printing, product design, and work management, delivering functional solutions under real-world constraints.
                             </p>
                         </div>
@@ -203,13 +203,13 @@ export default function AboutUsPage() {
                 {/* Phase 2 Section */}
                 <div
                     ref={phase2Ref as React.RefObject<HTMLDivElement>}
-                    className={`relative p-8 md:p-12 rounded-3xl bg-slate-900 text-white overflow-hidden shadow-xl transition-all duration-1000 ${phase2InView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}
+                    className={`relative p-10 md:p-16 lg:p-20 rounded-3xl bg-slate-900 text-white overflow-hidden shadow-xl transition-all duration-1000 ${phase2InView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-100'}`}
                 >
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/20 blur-[80px] rounded-full" />
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full" />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-                        <div className="lg:col-span-7 space-y-6">
-                            <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-white/10 text-emerald-400 border border-white/10 backdrop-blur-sm mb-2">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10">
+                        <div className="lg:col-span-7 space-y-10">
+                            <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-white/10 text-emerald-400 border border-white/10 backdrop-blur-sm mb-4">
                                 <HiOutlineAcademicCap className="h-8 w-8" />
                             </div>
                             <h3 className="text-3xl sm:text-4xl font-black leading-tight">
@@ -218,19 +218,16 @@ export default function AboutUsPage() {
                             <p className="text-lg text-slate-300 leading-relaxed">
                                 Our transition toward education began when we successfully executed a lab setup for a diploma-level engineering college, where we installed and commissioned 3D printers and CNC machines.
                             </p>
-                            <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm inline-block">
-                                <p className="text-emerald-300 font-medium italic">
+                            <div className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm inline-block">
+                                <p className="text-emerald-300 font-medium italic leading-relaxed">
                                     "This project gave us firsthand insight into the gaps in practical, hands-on learning within Nepal's education system—particularly the lack of affordable, engaging, and curriculum-aligned lab resources."
                                 </p>
                             </div>
                         </div>
                         <div className="lg:col-span-5 flex justify-center">
-                            <div className="w-full max-w-sm aspect-square rounded-full border border-white/10 flex items-center justify-center relative bg-white/5 backdrop-blur-sm p-8">
-                                <div className="absolute inset-0 border-2 border-dashed border-white/20 rounded-full animate-[spin_60s_linear_infinite]" />
-                                <HiOutlineBeaker className="h-32 w-32 text-white/20" />
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <HiOutlineAcademicCap className="h-20 w-20 text-emerald-400 drop-shadow-[0_0_15px_rgba(52,211,153,0.5)]" />
-                                </div>
+                            <div className="w-full max-w-sm aspect-square rounded-full border border-white/10 flex items-center justify-center relative bg-white/5 backdrop-blur-sm p-12">
+                                <div className="absolute inset-0 border-[1px] border-dashed border-white/20 rounded-full animate-[spin_120s_linear_infinite]" />
+                                <Image src="/images/education/our%20journey.png" alt="Our Journey" fill className="object-cover rounded-full" />
                             </div>
                         </div>
                     </div>

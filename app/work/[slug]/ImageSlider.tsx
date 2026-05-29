@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import { useState, useRef, useEffect } from 'react';
 import { HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlinePhoto } from 'react-icons/hi2';
@@ -82,7 +83,7 @@ export default function ImageSlider({ images, title }: { images: string[], title
                             {/* Loading Skeleton */}
                             <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 animate-pulse"></div>
                             
-                            <img 
+                            <Image width={800} height={600} 
                                 src={img} 
                                 alt={`${title} ${idx + 1}`} 
                                 className="absolute inset-0 w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700 ease-out z-10"

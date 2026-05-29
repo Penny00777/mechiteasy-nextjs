@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -63,7 +64,7 @@ function StepCard({ step, index }: { step: any; index: number }) {
       <p className="mt-3 text-sm leading-relaxed text-slate-600">{step.description}</p>
       <div className="mt-4 overflow-hidden rounded-2xl bg-slate-100/90">
         <div className="group relative">
-          <img src={step.image} alt={step.title} className="h-40 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:h-44 md:h-40" />
+          <Image width={800} height={600} src={step.image} alt={step.title} className="h-40 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:h-44 md:h-40" />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-slate-900/10 via-slate-900/0 to-primary-500/20" />
         </div>
       </div>

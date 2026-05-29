@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import React, { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
@@ -87,7 +88,7 @@ export default function KitDetails() {
             <div className="relative aspect-[16/9] w-full overflow-hidden">
               {images.map((img, idx) => (
                 <div key={idx} className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentImg ? 'opacity-100 scale-100' : 'opacity-0 scale-105'} transform transition-transform`}>
-                  <img src={img} alt={`${kit.name} ${idx + 1}`} className="h-full w-full object-cover" />
+                  <Image width={800} height={600} src={img} alt={`${kit.name} ${idx + 1}`} className="h-full w-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 </div>
               ))}
@@ -218,7 +219,7 @@ export default function KitDetails() {
                     {kit.learningMedia?.type === 'video' ? (
                       <video src={kit.learningMedia.src} autoPlay loop muted playsInline className="h-full w-full object-cover transition-transform duration-700 group-hover/gif:scale-110" />
                     ) : (
-                      <img src={kit.learningMedia?.src || "/gifs/led-hand-crank-gen.gif"} alt="Hands-on Learning Experience" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover/gif:scale-110" />
+                      <Image width={800} height={600} src={kit.learningMedia?.src || "/gifs/led-hand-crank-gen.gif"} alt="Hands-on Learning Experience" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover/gif:scale-110" />
                     )}
                     <div className="hidden flex-col items-center justify-center text-slate-400 p-8 text-center space-y-4">
                       <div className="h-12 w-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center"><FiPlay className="h-8 w-8 opacity-20" /></div>

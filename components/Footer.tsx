@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import React from 'react';
 import Link from 'next/link';
@@ -18,7 +19,7 @@ interface FooterSection {
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const logoSrc = '/logos/handshake-logo.png';
+  const logoSrc = '/logos/handshake-logo.webp';
 
   const footerLinks: FooterSection[] = [
     {
@@ -57,7 +58,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-6">
             <Link href="/" className="inline-flex items-center gap-3 group">
-              <img
+              <Image width={800} height={600} 
                 src={logoSrc}
                 alt="Mech It Easy"
                 loading="lazy"

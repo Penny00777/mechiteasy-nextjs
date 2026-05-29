@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     title: 'Mech It Easy | STEM Kits & Engineering Labs',
     description:
       'Hands-on engineering education for the next generation. Professional STEM kits and lab setup solutions in Nepal.',
-    images: ['/logos/white-red-logo-no-bg.png'],
+    images: ['/logos/white-red-logo-no-bg.webp'],
   },
   icons: {
-    icon: '/logos/handshake-logo.png',
+    icon: '/logos/handshake-logo.webp',
   },
 };
 

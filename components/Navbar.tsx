@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
@@ -48,7 +49,7 @@ export default function Navbar() {
   const navPillsRef = useRef<HTMLDivElement>(null);
   const [indicatorStyle, setIndicatorStyle] = useState<IndicatorStyle | null>(null);
 
-  const logoSrc = '/logos/white-red-logo-no-bg.png';
+  const logoSrc = '/logos/white-red-logo-no-bg.webp';
 
   useEffect(() => {
     if (!navPillsRef.current) return;
@@ -84,7 +85,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               aria-label="Go to homepage"
             >
-              <img
+              <Image width={800} height={600} 
                 src={logoSrc}
                 alt="Company logo"
                 loading="lazy"

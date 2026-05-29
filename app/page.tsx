@@ -28,7 +28,7 @@ export default function Home() {
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" />
                     <video className="absolute inset-0 h-full w-full object-cover opacity-70" autoPlay muted loop playsInline preload="auto">
-                        <source src="/videos/hero-video.mp4" type="video/mp4" />
+                        <source src="https://3pz2dqcs9ado1sdm.public.blob.vercel-storage.com/videos/hero-video.mp4" type="video/mp4" />
                     </video>
                 </div>
                 <div className="absolute inset-0 bg-slate-900/60" />
