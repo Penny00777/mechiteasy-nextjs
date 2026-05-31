@@ -25,19 +25,17 @@ export default function Footer() {
     {
       title: 'Company',
       links: [
-        { label: 'Home', to: '/' },
         { label: 'About Us', to: '/about-us' },
         { label: 'Kits', to: '/mech-it-easy-kits' },
         { label: 'Labs', to: '/mech-it-easy-labs' },
-        { label: 'Contact', to: '/contact' },
       ]
     },
     {
       title: 'Support',
       links: [
-        { label: '3D Printing', to: '/3d-printing-services' },
         { label: 'Make a Kit', to: '/make-a-kit' },
         { label: 'FAQ', to: '/contact#faq' },
+        { label: 'Contact', to: '/contact' },
       ]
     },
     {
@@ -58,7 +56,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-6">
             <Link href="/" className="inline-flex items-center gap-3 group">
-              <Image width={800} height={600} 
+              <Image width={800} height={600}
                 src={logoSrc}
                 alt="Mech It Easy"
                 loading="lazy"

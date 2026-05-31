@@ -9,7 +9,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
 
     const workData = {
         'functional-products': {
-            title: 'Custom Designed and Printed Parts',
+            title: 'Functional Products',
             description: 'Solving real-world problems with custom 3D printed functional parts.',
             folder: 'images/categories/functional-products',
             blogContent: `
@@ -47,7 +47,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
                     <p>Whether it's for culinary arts or industrial casting, precision is key. For one of our customers, we designed custom chocolate shaper molds. The customer wanted a mold which would help him pour-mold his chocolates into specific shapes. We designed the mold in Fusion 360 precisely to their dimensional and shape requirements. As this required perfect surface detailing, we proceeded with SLA resin printing and delivered a high-fidelity master.</p>
 
                     <h4 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Versatile Master Molds</h4>
-                    <p>We have designed master molds for every customer requirement. Customers share images or concepts of things they want the master mold of, and we design the 3D CAD model and resin print it. These prints need to be of extremely high resolution, as they will later be used for making secondary production molds (like silicone) for casting statues, custom logos (like the Keshav, Champapur, and Butwal logos), and more.</p>
+                    <p>We have designed master molds for every customer requirement. Customers share images or concepts of things they want the master mold of, and we design the 3D CAD model and resin print it. These prints need to be of extremely high resolution, as they will later be used for making secondary production molds (like silicone) for casting statues, custom logos and badges only.</p>
                 </div>
             `
         },
@@ -105,18 +105,18 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
     let images: string[] = [];
     try {
         const publicDir = path.join(process.cwd(), 'public');
-        
+
         const targetDir = path.join(publicDir, data.folder);
         if (fs.existsSync(targetDir)) {
             let files = fs.readdirSync(targetDir);
-            
+
             images = files
                 .filter(file => {
                     const l = file.toLowerCase();
                     return l.endsWith('.jpg') || l.endsWith('.png') || l.endsWith('.jpeg') || l.endsWith('.webp') || l.endsWith('.avif');
                 })
                 .map(file => '/' + data.folder + '/' + file);
-                
+
             if (slug === 'master-molds') {
                 const chocoDir = path.join(targetDir, 'chocolate-molds');
                 if (fs.existsSync(chocoDir)) {
@@ -144,14 +144,14 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-                
+
                 {/* Header Section */}
                 <div className="space-y-6 max-w-4xl">
                     <Link href="/about-us" className="inline-flex items-center gap-2 text-sm font-semibold text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 transition-colors">
                         <HiOutlineArrowLeft className="h-4 w-4" />
                         Back to About Us
                     </Link>
-                    
+
                     <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
                         {data.title}
                     </h1>
@@ -164,7 +164,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
                     {/* Blog Content - Centered on Top */}
                     <div className="w-full max-w-5xl mx-auto h-fit relative z-10">
                         <div className="relative overflow-hidden bg-white dark:bg-slate-900 p-8 sm:p-12 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-xl">
-                            
+
                             {/* Decorative Icon Background */}
                             <div className="absolute -top-10 -right-10 text-slate-100 dark:text-slate-800/50">
                                 <HiOutlineCube className="w-64 h-64" />
@@ -176,7 +176,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
                                 <div className="w-16 h-16 shrink-0 flex items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-500 shadow-lg shadow-emerald-500/20">
                                     <HiOutlineSparkles className="h-8 w-8 text-white" />
                                 </div>
-                                
+
                                 <div>
                                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-400 mb-1">The Story</h3>
                                     <h2 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-sky-600 dark:from-emerald-400 dark:to-sky-400">

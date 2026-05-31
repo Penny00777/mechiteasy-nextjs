@@ -37,7 +37,7 @@ export default function VisionGoalsSection() {
     return (
         <section
             ref={ref}
-            className="relative overflow-hidden py-24 lg:py-32 bg-white dark:bg-slate-950 transition-colors duration-500"
+            className="relative overflow-hidden pt-24 pb-10 lg:pt-32 lg:pb-12 bg-white dark:bg-slate-950 transition-colors duration-500"
         >
             {/* Background Decorative Accents */}
             <div className="absolute inset-0 pointer-events-none -z-10">

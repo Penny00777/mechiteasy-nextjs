@@ -12,7 +12,9 @@ import {
     HiOutlineWrenchScrewdriver,
     HiOutlineBeaker,
     HiOutlineSparkles,
-    HiOutlineCog
+    HiOutlineCog,
+    HiOutlinePaintBrush,
+    HiOutlineGiftTop
 } from "react-icons/hi2";
 
 function useSectionInView() {
@@ -72,28 +74,39 @@ export default function AboutUsPage() {
     const productsData = [
         {
             title: "STEM Kits Development",
-            slug: "stem-kits-development"
+            slug: "stem-kits-development",
+            icon: HiOutlineSparkles,
+            color: "emerald"
         },
         {
             title: "Functional Products",
-            slug: "functional-products"
+            slug: "functional-products",
+            icon: HiOutlineCog,
+            color: "sky"
         },
         {
             title: "Customization Design Help",
-            slug: "customization-design-help"
+            slug: "customization-design-help",
+            icon: HiOutlinePaintBrush,
+            color: "amber"
         },
         {
-
             title: "Master Molds",
-            slug: "master-molds"
+            slug: "master-molds",
+            icon: HiOutlineCube,
+            color: "violet"
         },
         {
             title: "Lithophane-based Custom Lamps",
-            slug: "lithophane-lamps"
+            slug: "lithophane-lamps",
+            icon: HiOutlineLightBulb,
+            color: "rose"
         },
         {
             title: "Collectibles and Figures",
-            slug: "collectibles-and-figures"
+            slug: "collectibles-and-figures",
+            icon: HiOutlineGiftTop,
+            color: "indigo"
         }
     ];
 
@@ -181,16 +194,27 @@ export default function AboutUsPage() {
                             Notable Work & Products
                         </h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            {productsData.map((product, idx) => (
-                                <Link href={`/work/${product.slug}`} key={idx} className="block h-full">
-                                    <div className="p-8 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-sky-300 dark:hover:border-sky-700/50 hover:shadow-lg transition-all duration-300 group cursor-pointer h-full flex flex-col items-start justify-start">
-                                        <div className="h-12 w-12 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-500 group-hover:text-sky-500 group-hover:bg-sky-50 dark:group-hover:bg-sky-900/30 transition-colors mb-6 shrink-0">
-                                            <HiOutlineWrenchScrewdriver className="h-6 w-6" />
+                            {productsData.map((product, idx) => {
+                                const IconComp = product.icon;
+                                return (
+                                    <Link href={`/work/${product.slug}`} key={idx} className="block h-full">
+                                        <div className="p-8 rounded-2xl bg-white dark:bg-slate-900/50 border-2 border-slate-200 dark:border-slate-800 transition-all duration-400 group cursor-pointer h-full flex flex-col items-start justify-between hover:scale-[1.04] hover:shadow-[0_0_24px_-4px_rgba(16,185,129,0.45)] hover:border-emerald-400 dark:hover:border-emerald-500 relative overflow-hidden">
+                                            <div>
+                                                <div className="h-12 w-12 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-500 group-hover:text-emerald-500 group-hover:bg-emerald-50 dark:group-hover:bg-emerald-900/30 transition-all duration-300 mb-6 shrink-0 ring-1 ring-slate-200 dark:ring-slate-700 group-hover:ring-emerald-300 dark:group-hover:ring-emerald-700">
+                                                    <IconComp className="h-6 w-6" />
+                                                </div>
+                                                <h5 className="font-bold text-slate-900 dark:text-white leading-snug">{product.title}</h5>
+                                            </div>
+                                            <div className="flex w-full justify-end mt-5">
+                                                <span className="inline-flex items-center gap-1 text-xs font-semibold text-slate-400 group-hover:text-emerald-500 transition-colors duration-300">
+                                                    See Details
+                                                    <svg className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                                                </span>
+                                            </div>
                                         </div>
-                                        <h5 className="font-bold text-slate-900 dark:text-white leading-snug">{product.title}</h5>
-                                    </div>
-                                </Link>
-                            ))}
+                                    </Link>
+                                );
+                            })}
                         </div>
                         <div className="mt-8 p-8 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-lg">
                             <p className="font-medium leading-relaxed">

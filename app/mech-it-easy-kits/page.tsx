@@ -114,7 +114,7 @@ export default function MechItEasyKits() {
                     <p className="text-xs leading-relaxed text-slate-500 sm:text-sm dark:text-slate-400">{kit.detail}</p>
                   </div>
                   <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
-                    <div className="flex flex-col text-[11px] text-slate-500 dark:text-slate-400"><span>Reusable, classroom-tested components.</span><span>Designed for both light and dark themes.</span></div>
+                    <div className="flex flex-col text-[11px] text-slate-500 dark:text-slate-400"><span>Reusable, classroom-tested components.</span></div>
                     {kit.comingSoon ? (
                       <button onClick={() => setShowModal(true)} className="inline-flex items-center text-xs font-semibold text-amber-500 transition-colors hover:text-amber-600">Suggest a Kit<FiArrowRight className="ml-1 h-3 w-3" /></button>
                     ) : (

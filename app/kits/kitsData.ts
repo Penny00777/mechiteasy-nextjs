@@ -59,7 +59,7 @@ export const kitsData: Record<string, KitData> = {
   'hand-crank-generator': {
     name: 'Hand Crank Generator STEM Kit',
     subTitle: 'Grade 9–10 Focus',
-    images: ['/images/education/hand-crank-generator.webp'],
+    images: ['/images/education/hand-crank-generator.webp', '/images/education/hand-crank-generator2.png'],
     learningMedia: { type: 'image', src: '/gifs/led-hand-crank-gen.gif' },
     Icon: FiZap,
     gradeLevel: 'Grades 9-10',

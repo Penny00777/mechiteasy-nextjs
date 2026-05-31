@@ -1,13 +1,16 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import {
     HiOutlineLightBulb,
     HiOutlineAcademicCap,
     HiOutlineSparkles,
     HiOutlineCog,
-    HiOutlineBeaker
+    HiOutlineBeaker,
+    HiOutlineCube,
+    HiOutlineCommandLine
 } from "react-icons/hi2";
 
 interface CardData {
@@ -55,21 +58,24 @@ export default function WhoWeAreSection() {
                                     Bring Mech-It-Easy <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-500">To Your School</span>
                                 </h2>
                                 <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                                    Watch as digital ideas seamlessly transform into physical reality. Our high-precision additive manufacturing process builds objects layer by layer, unlocking infinite possibilities for creators, engineers, and educators alike.
+                                    Our educational kits help students learn through practical activities and experiments. Each kit is designed to make science, technology, and engineering concepts easier to understand and more engaging to explore.
                                 </p>
                                 <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                                    <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-semibold bg-white dark:bg-slate-900 px-5 py-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:scale-105 hover:shadow-md cursor-default">
-                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-500">
-                                            <HiOutlineSparkles className="w-4 h-4" />
+
+                                    <Link href="/mech-it-easy-kits" className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-semibold bg-white dark:bg-slate-900 px-5 py-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:scale-105 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-600 cursor-pointer group">
+                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-500/20 text-blue-500">
+                                            <HiOutlineCube className="w-4 h-4" />
                                         </div>
-                                        Layer-by-Layer Precision
-                                    </div>
-                                    <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-semibold bg-white dark:bg-slate-900 px-5 py-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:scale-105 hover:shadow-md cursor-default">
-                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-500/20 text-amber-500">
-                                            <HiOutlineLightBulb className="w-4 h-4" />
+                                        Mech It Easy Kits
+                                        <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                                    </Link>
+                                    <Link href="/mech-it-easy-labs" className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-semibold bg-white dark:bg-slate-900 px-5 py-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:scale-105 hover:shadow-md hover:border-violet-300 dark:hover:border-violet-600 cursor-pointer group">
+                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-violet-100 dark:bg-violet-500/20 text-violet-500">
+                                            <HiOutlineCommandLine className="w-4 h-4" />
                                         </div>
-                                        Rapid Prototyping
-                                    </div>
+                                        Mech It Easy Labs
+                                        <svg className="w-4 h-4 text-slate-400 group-hover:text-violet-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -77,8 +83,8 @@ export default function WhoWeAreSection() {
                             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2">
                                 <div className="relative w-full max-w-[340px] aspect-[9/16] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 bg-slate-900 group transform transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.4)]">
                                     <iframe
-                                        className="absolute inset-0 w-full h-full transition-transform duration-700 group-hover:scale-[1.03]"
-                                        src="https://www.youtube.com/embed/K4bmwH9YL9Y?autoplay=1&mute=1&loop=1&playlist=K4bmwH9YL9Y"
+                                        className="absolute inset-0 w-full h-full scale-[1.05] transition-transform duration-700 group-hover:scale-110"
+                                        src="https://www.youtube.com/embed/K4bmwH9YL9Y?autoplay=1&mute=1&loop=1&playlist=K4bmwH9YL9Y&controls=0&modestbranding=1"
                                         title="What is 3D Printing YouTube Short"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
