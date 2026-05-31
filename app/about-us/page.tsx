@@ -52,7 +52,7 @@ const teamMembers = [
     {
         name: "Bishal Gautam",
         role: "Mechanical Engineer",
-        image: "/images/team/Bishal.png"
+        image: "/images/team/bishal.png"
     },
     {
         name: "Anmol Shrestha",
