@@ -44,7 +44,7 @@ export default function WorkDetailsPage({ params }: { params: { slug: string } }
             folder: 'images/categories/master-molds',
             blogContent: `
                 <div class="space-y-6 text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
-                    <p>Whether it's for culinary arts or industrial casting, precision is key. For one of our customers, we designed custom chocolate shaper molds. The customer wanted a mold which would help him pour-mold his chocolates into specific shapes. We designed the mold in Fusion 360 precisely to their dimensional and shape requirements. As this required perfect surface detailing, we proceeded with SLA resin printing and delivered a high-fidelity master.</p>
+                    <p>Precision and customization are at the core of digital manufacturing. For one of our clients, we designed custom chocolate molding dies tailored to their exact shape and dimensional requirements. The mold was carefully designed in Fusion 360 to ensure accurate form and smooth detailing. Since the project required high surface precision and fine finish quality, we utilized SLA resin printing to produce a high-fidelity master prototype. </p>
 
                     <h4 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Versatile Master Molds</h4>
                     <p>We have designed master molds for every customer requirement. Customers share images or concepts of things they want the master mold of, and we design the 3D CAD model and resin print it. These prints need to be of extremely high resolution, as they will later be used for making secondary production molds (like silicone) for casting statues, custom logos and badges only.</p>

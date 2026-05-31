@@ -44,7 +44,7 @@ export default function VisionGoalsSection() {
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 blur-[120px] rounded-full dark:bg-emerald-900/10" />
             </div>
 
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
 
                     {/* Left Side: Content */}
@@ -59,8 +59,8 @@ export default function VisionGoalsSection() {
                             </div>
 
                             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-                                Empowering <br />
-                                <span className="text-emerald-500">Future</span> <br />
+                                Building
+                                <span className="text-emerald-500"> Future</span> <br />
                                 Innovators Today.
                             </h2>
 
@@ -84,7 +84,7 @@ export default function VisionGoalsSection() {
                     {/* Right Side: Loop Design */}
                     <div className={`lg:col-span-7 relative transition-all duration-1000 delay-300 ${inView ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
                         }`}>
-                        <div className="relative aspect-square w-full max-w-[600px] mx-auto">
+                        <div className="relative aspect-square w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0">
 
                             {/* SVG Loop Arrows */}
                             <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400">

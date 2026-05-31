@@ -45,7 +45,7 @@ export default function Home() {
                             We turn curriculum into hands-on, visually intuitive projects aligned with core science concepts—integrating practical learning with digital fabrication.
                         </p>
                         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                            <button type="button" onClick={() => router.push('/mech-it-easy-kits')} className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-emerald-600 px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)] active:scale-95">
+                            <button type="button" onClick={() => router.push('/mech-it-easy-kits')} className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-emerald-600 px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(16,185,129,0.2)] active:scale-95">
                                 <span className="relative z-10">Explore Our Kits</span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-sky-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                             </button>

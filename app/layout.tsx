@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     images: ['/logos/white-red-logo-no-bg.webp'],
   },
   icons: {
-    icon: '/logos/handshake-logo.webp',
+    icon: '/logos/handshake-logo.png',
   },
 };
 

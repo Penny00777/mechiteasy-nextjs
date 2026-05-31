@@ -82,7 +82,7 @@ export default function MechItEasyKits() {
               <article key={kit.id} ref={rowRef} className={`mx-auto flex w-full max-w-6xl flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white/90 shadow-sm shadow-slate-900/5 transition-all duration-700 dark:border-slate-800 dark:bg-slate-950/90 ${rowInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} ${isImageLeft ? '' : 'lg:flex-row-reverse'} lg:flex-row ${kit.comingSoon ? 'opacity-75 grayscale-[0.3]' : ''}`}>
                 {kit.comingSoon ? (
                   <div onClick={() => setShowModal(true)} className="relative w-full overflow-hidden bg-slate-100/90 dark:bg-slate-900/90 lg:w-1/2 cursor-pointer group">
-                    <Image width={800} height={600} src={kit.image} alt={kit.name} loading="lazy" className="h-64 w-full object-cover sm:h-72 lg:h-full" />
+                    <Image width={800} height={600} src={kit.image} alt={kit.name} priority={index === 0} loading={index === 0 ? undefined : "lazy"} className="h-64 w-full object-cover sm:h-72 lg:h-full" />
                     <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] flex items-center justify-center">
                       <div className="flex flex-col items-center gap-3">
                         <span className="rounded-full bg-amber-500 px-6 py-2 text-sm font-bold text-white shadow-xl ring-4 ring-amber-500/30">Coming Soon</span>
@@ -91,9 +91,9 @@ export default function MechItEasyKits() {
                     </div>
                   </div>
                 ) : (
-                  <Link href={`/kits/${kit.id}`} className="relative w-full overflow-hidden bg-slate-100/90 dark:bg-slate-900/90 lg:w-1/2 group transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.6),0_0_40px_-10px_rgba(59,130,246,0.6)] hover:border-emerald-500 dark:hover:border-emerald-400 border-2 border-transparent z-10">
+                  <Link href={`/kits/${kit.id}`} className="relative w-full overflow-hidden bg-slate-100/90 dark:bg-slate-900/90 lg:w-1/2 group transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.2),0_0_40px_-10px_rgba(59,130,246,0.2)] hover:border-emerald-500 dark:hover:border-emerald-400 border-2 border-transparent z-10">
                     <div className="h-full w-full">
-                      <Image width={800} height={600} src={kit.image} alt={kit.name} loading="lazy" className="h-64 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:h-72 lg:h-full" />
+                      <Image width={800} height={600} src={kit.image} alt={kit.name} priority={index === 0} loading={index === 0 ? undefined : "lazy"} className="h-64 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02] sm:h-72 lg:h-full" />
                       <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-primary-500/10 via-sky-400/5 to-emerald-400/10 opacity-80 mix-blend-multiply dark:opacity-90" />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><span className="rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-primary-600 shadow-lg backdrop-blur-sm">View Details</span></div>
                     </div>

@@ -84,11 +84,11 @@ export default function KitDetails() {
         </div>
 
         <div className="relative flex flex-col items-center text-center">
-          <div className="group relative w-full max-w-4xl overflow-hidden rounded-[3rem] bg-white shadow-2xl shadow-slate-300/50 dark:bg-slate-900 dark:shadow-none transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.6),0_0_40px_-10px_rgba(59,130,246,0.6)] hover:border-emerald-500 dark:hover:border-emerald-400 border-2 border-transparent">
+          <div className="group relative w-full max-w-4xl overflow-hidden rounded-[3rem] bg-white shadow-2xl shadow-slate-300/50 dark:bg-slate-900 dark:shadow-none transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.2),0_0_40px_-10px_rgba(59,130,246,0.2)] hover:border-emerald-500 dark:hover:border-emerald-400 border-2 border-transparent">
             <div className="relative aspect-[16/9] w-full overflow-hidden">
               {images.map((img, idx) => (
                 <div key={idx} className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentImg ? 'opacity-100 scale-100' : 'opacity-0 scale-105'} transform transition-transform`}>
-                  <Image width={800} height={600} src={img} alt={`${kit.name} ${idx + 1}`} className="h-full w-full object-cover" />
+                  <Image width={800} height={600} src={img} alt={`${kit.name} ${idx + 1}`} priority={idx === 0} loading={idx === 0 ? undefined : "lazy"} className="h-full w-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 </div>
               ))}

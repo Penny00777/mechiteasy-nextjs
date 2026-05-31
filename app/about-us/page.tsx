@@ -43,10 +43,32 @@ function useSectionInView() {
 
     return [ref, inView] as const;
 }
+const teamMembers = [
+    {
+        name: "Bivek Raymajhi",
+        role: "Mechanical Engineer",
+        image: "/images/team/bivek.png"
+    },
+    {
+        name: "Bishal Guatam",
+        role: "Mechanical Engineer",
+        image: "/images/team/Bishal.png"
+    },
+    {
+        name: "Anmol Shrestha",
+        role: "Mechanical Engineer",
+        image: "/images/team/anmol.jpeg"
+    },
+    {
+        name: "Sudip Niroula",
+        role: "Fullstack Developer",
+        image: "/images/team/sudip.png"
+    }
+];
 
 export default function AboutUsPage() {
-    const [heroRef, heroInView] = useSectionInView();
     const [introRef, introInView] = useSectionInView();
+    const [teamRef, teamInView] = useSectionInView();
     const [phase1Ref, phase1InView] = useSectionInView();
     const [productsRef, productsInView] = useSectionInView();
     const [phase2Ref, phase2InView] = useSectionInView();
@@ -126,10 +148,7 @@ export default function AboutUsPage() {
 
             <div className="w-full space-y-16 lg:space-y-20 relative z-10 pt-0">
                 {/* Hero / Intro Section Text */}
-                <div
-                    ref={heroRef as React.RefObject<HTMLDivElement>}
-                    className={`relative pt-8 pb-16 lg:pt-12 lg:pb-24 transition-all duration-1000 ${heroInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
-                >
+                <div className="relative pt-8 pb-16 lg:pt-12 lg:pb-24 animate-in fade-in slide-in-from-bottom-12 duration-1000 fill-mode-both">
 
                     {/* Intro Text */}
                     <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
@@ -146,6 +165,41 @@ export default function AboutUsPage() {
                                 We're Aakaran Tech — a Nepal-based team of engineering graduates with hands-on experience in 3D printing, laser cutting, and CNC machining. What started as a fabrication service has grown into a mission: making science and math tangible for every Nepali classroom.
                             </p>
                         </div>
+                    </div>
+                </div>
+
+                {/* Our Team Section */}
+                <div ref={teamRef as React.RefObject<HTMLDivElement>} className={`transition-all duration-1000 ${teamInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} pt-20 pb-20`}>
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/30 shadow-sm mb-6">
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">Our Team</span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter mb-4">
+                            Meet the people behind <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-500">Mech-It-Easy</span>
+                        </h2>
+                        <p className="text-lg text-slate-600 dark:text-slate-400">
+                            A dedicated group of engineers, designers, and educators working together to revolutionize hands-on learning.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {teamMembers.map((member, idx) => (
+                            <div key={idx} className="group relative bg-white dark:bg-slate-900 rounded-[2rem] p-6 text-center border border-slate-100 dark:border-slate-800 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] hover:border-emerald-200 dark:hover:border-emerald-900/50 flex flex-col items-center">
+                                {/* Profile Image */}
+                                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-slate-50 dark:border-slate-800 shadow-md group-hover:border-emerald-100 dark:group-hover:border-emerald-900/50 transition-colors duration-500">
+                                    <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-emerald-400 transition-colors">
+                                        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                                    </div>
+                                    {/* Uncomment and use Next/Image when actual photos are available */}
+                                    <Image src={member.image} alt={member.name} fill className="object-cover" />
+                                </div>
+
+                                {/* Info */}
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{member.name}</h3>
+                                <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-4">{member.role}</p>
+
+                            </div>
+                        ))}
                     </div>
                 </div>
 
@@ -198,7 +252,7 @@ export default function AboutUsPage() {
                                 const IconComp = product.icon;
                                 return (
                                     <Link href={`/work/${product.slug}`} key={idx} className="block h-full">
-                                        <div className="p-8 rounded-2xl bg-white dark:bg-slate-900/50 border-2 border-slate-200 dark:border-slate-800 transition-all duration-400 group cursor-pointer h-full flex flex-col items-start justify-between hover:scale-[1.04] hover:shadow-[0_0_24px_-4px_rgba(16,185,129,0.45)] hover:border-emerald-400 dark:hover:border-emerald-500 relative overflow-hidden">
+                                        <div className="p-8 rounded-2xl bg-white dark:bg-slate-900/50 border-2 border-slate-200 dark:border-slate-800 transition-all duration-400 group cursor-pointer h-full flex flex-col items-start justify-between hover:scale-[1.02] hover:shadow-[0_0_24px_-4px_rgba(16,185,129,0.2)] hover:border-emerald-400 dark:hover:border-emerald-500 relative overflow-hidden">
                                             <div>
                                                 <div className="h-12 w-12 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-500 group-hover:text-emerald-500 group-hover:bg-emerald-50 dark:group-hover:bg-emerald-900/30 transition-all duration-300 mb-6 shrink-0 ring-1 ring-slate-200 dark:ring-slate-700 group-hover:ring-emerald-300 dark:group-hover:ring-emerald-700">
                                                     <IconComp className="h-6 w-6" />

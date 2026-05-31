@@ -14,7 +14,7 @@ const ImageSlider = ({ images }: { images: SliderImage[] }) => {
   useEffect(() => { const timer = setInterval(next, 5000); return () => clearInterval(timer); }, [images.length]);
 
   return (
-    <div className="relative group overflow-hidden rounded-2xl border-2 border-slate-200 bg-slate-100 shadow-lg dark:border-slate-800 aspect-[4/3] w-full transition-all duration-500 hover:shadow-[0_8px_30px_-8px_rgba(16,185,129,0.4)] hover:border-emerald-400 dark:hover:border-emerald-500">
+    <div className="relative group overflow-hidden rounded-2xl border-2 border-slate-200 bg-slate-100 shadow-lg dark:border-slate-800 aspect-[4/3] w-full transition-all duration-500 hover:shadow-[0_8px_30px_-8px_rgba(16,185,129,0.2)] hover:border-emerald-400 dark:hover:border-emerald-500">
       <div className="flex h-full w-full transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${current * 100}%)` }}>
         {images.map((img, idx) => (<Image width={800} height={600} key={idx} src={img.src} alt={img.alt} className="h-full w-full flex-shrink-0 object-cover" />))}
       </div>
@@ -40,14 +40,13 @@ function useInViewOnce(options?: IntersectionObserverInit) {
 }
 
 export default function MechItEasyLabs() {
-  const [heroRef, heroInView] = useInViewOnce({ threshold: 0.1 });
   const [labSetupRef, labSetupInView] = useInViewOnce({ threshold: 0.1 });
   const [classesRef, classesInView] = useInViewOnce({ threshold: 0.1 });
   const [programRef, programInView] = useInViewOnce({ threshold: 0.15 });
   const router = useRouter();
 
   const labImages: SliderImage[] = [
-    { src: "/images/labs/3d-printing-lab.webp", alt: "3D Printing Lab Setup" },
+
     { src: "/images/labs/lab-setup-1.webp", alt: "Lab Setup 1" },
     { src: "/images/labs/lab-setup-2.webp", alt: "Lab Setup 2" },
     { src: "/images/labs/lab-setup-3.webp", alt: "Lab Setup 3" },
@@ -55,8 +54,7 @@ export default function MechItEasyLabs() {
   ];
   const classImages: SliderImage[] = [
     { src: "/images/labs/lab-setup-2.webp", alt: "Digital Fabrication Class 1" },
-    { src: "/images/home/home-1.avif", alt: "Students Learning" },
-    { src: "/images/home/home-2.avif", alt: "Hands-on Training" },
+
     { src: "/images/labs/lab-setup-4.webp", alt: "Design Session" },
   ];
 
@@ -73,15 +71,15 @@ export default function MechItEasyLabs() {
       {/* ═══════════════════════════════════════════════ */}
       <section className="px-4 sm:px-6 lg:px-8 pt-6 pb-8">
         <div
-          ref={heroRef as React.RefObject<HTMLDivElement>}
           onClick={() => router.push('/contact')}
-          className={`group relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] shadow-2xl cursor-pointer transition-all duration-700 ${heroInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+          className={`group relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] shadow-2xl cursor-pointer animate-in fade-in slide-in-from-bottom-6 duration-1000 fill-mode-both`}
         >
           <Image
             width={1400}
             height={600}
             src="/images/labs/3d-printing-lab.webp"
             alt="3D Printing Lab Setup"
+            priority={true}
             className="w-full aspect-[21/9] object-cover transition-transform duration-[1.2s] group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent" />
@@ -227,7 +225,7 @@ export default function MechItEasyLabs() {
             { num: '02', bg: '#10b981', shadow: 'rgba(16,185,129,0.3)', Icon: HiOutlinePresentationChartLine, title: 'Month 2: Applied Design', items: ['Design linked to curriculum', 'Print and test physical models', 'Iterative design improvement', 'Measuring real engineering results'] },
             { num: '03', bg: '#f59e0b', shadow: 'rgba(245,158,11,0.3)', Icon: HiOutlineTrophy, title: 'Month 3: Student Showcase', items: ['Individual project design sprint', 'Printing final custom designs', 'Final presentation to the class', 'Mini Innovation Showcase event'] },
           ].map((month) => (
-            <div key={month.num} className="relative rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-xl dark:border-slate-800 dark:bg-slate-950/40 overflow-hidden transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.6),0_0_40px_-10px_rgba(59,130,246,0.6)] hover:border-emerald-500 dark:hover:border-emerald-400 group">
+            <div key={month.num} className="relative rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-xl dark:border-slate-800 dark:bg-slate-950/40 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.2),0_0_40px_-10px_rgba(59,130,246,0.2)] hover:border-emerald-500 dark:hover:border-emerald-400 group">
               <div className="absolute top-0 right-0 p-4 text-4xl font-black text-slate-100 dark:text-slate-900/50 transition-colors group-hover:text-emerald-500/20">{month.num}</div>
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl text-white" style={{ backgroundColor: month.bg, boxShadow: `0 10px 15px -3px ${month.shadow}` }}><month.Icon className="h-8 w-8" /></div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50">{month.title}</h3>

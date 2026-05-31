@@ -38,7 +38,7 @@ export default function WhyIsItNeededSection() {
                     </div>
                     <div className="grid gap-6 sm:grid-cols-3">
                         {problems.map((item, i) => (
-                            <div key={i} className="group relative rounded-2xl border-2 border-slate-100 bg-white p-6 transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_0_30px_-5px_rgba(239,68,68,0.3)] hover:border-red-400 dark:border-slate-800 dark:bg-slate-950/40">
+                            <div key={i} className="group relative rounded-2xl border-2 border-slate-100 bg-white p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(239,68,68,0.15)] hover:border-red-400 dark:border-slate-800 dark:bg-slate-950/40">
                                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-red-50 text-red-500 dark:bg-red-950/30">{item.icon}</div>
                                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">{item.title}</h3>
                                 <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{item.desc}</p>
@@ -59,7 +59,7 @@ export default function WhyIsItNeededSection() {
                     </div>
                     <div className="grid gap-6 sm:grid-cols-3">
                         {solutions.map((item, i) => (
-                            <div key={i} className="group relative rounded-2xl border-2 border-slate-100 bg-white p-6 transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.6),0_0_40px_-10px_rgba(59,130,246,0.6)] hover:border-emerald-500 dark:border-slate-800 dark:bg-slate-950/40">
+                            <div key={i} className="group relative rounded-2xl border-2 border-slate-100 bg-white p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.2),0_0_40px_-10px_rgba(59,130,246,0.2)] hover:border-emerald-500 dark:border-slate-800 dark:bg-slate-950/40">
                                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-500 dark:bg-emerald-950/30">{item.icon}</div>
                                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">{item.title}</h3>
                                 <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{item.desc}</p>

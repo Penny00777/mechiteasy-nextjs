@@ -25,7 +25,7 @@ export default function MakeAKit() {
 
   return (
     <section className="space-y-12">
-      <div ref={headerRef} className={`mx-auto max-w-3xl text-center transform transition-all duration-700 ${headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      <div className={`mx-auto max-w-3xl text-center animate-in fade-in slide-in-from-bottom-4 duration-1000 fill-mode-both`}>
         <p className="inline-flex items-center gap-2 rounded-full border border-primary-500/40 bg-primary-500/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary-700 shadow-sm shadow-primary-500/30">How print works?</p>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Turn digital files into real classroom kits in three calm steps.</h1>
         <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">The same process works whether you&apos;re printing in your lab or downloading ready-to-cut templates.</p>
@@ -64,7 +64,7 @@ function StepCard({ step, index }: { step: any; index: number }) {
       <p className="mt-3 text-sm leading-relaxed text-slate-600">{step.description}</p>
       <div className="mt-4 overflow-hidden rounded-2xl bg-slate-100/90">
         <div className="group relative">
-          <Image width={800} height={600} src={step.image} alt={step.title} className="h-40 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:h-44 md:h-40" />
+          <Image width={800} height={600} src={step.image} alt={step.title} priority={index === 0} className="h-40 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:h-44 md:h-40" />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-slate-900/10 via-slate-900/0 to-primary-500/20" />
         </div>
       </div>

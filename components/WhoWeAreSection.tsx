@@ -10,7 +10,9 @@ import {
     HiOutlineCog,
     HiOutlineBeaker,
     HiOutlineCube,
-    HiOutlineCommandLine
+    HiOutlineCommandLine,
+    HiOutlineDocumentArrowDown,
+    HiArrowDown
 } from "react-icons/hi2";
 
 interface CardData {
@@ -44,9 +46,9 @@ export default function WhoWeAreSection() {
                 {/* Video Showcase Section */}
                 <div className="w-full relative py-12 lg:py-20">
                     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+                        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-10">
                             {/* Text Explanation Column */}
-                            <div className="w-full lg:w-1/2 space-y-8 text-center lg:text-left order-2 lg:order-1">
+                            <div className="w-full lg:w-3/5 space-y-8 text-center lg:text-left order-2 lg:order-1 lg:pr-8">
                                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-bold tracking-wide uppercase border border-blue-100 dark:border-blue-800/50 shadow-sm">
                                     <span className="relative flex h-2 w-2">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -60,27 +62,24 @@ export default function WhoWeAreSection() {
                                 <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                                     Our educational kits help students learn through practical activities and experiments. Each kit is designed to make science, technology, and engineering concepts easier to understand and more engaging to explore.
                                 </p>
-                                <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-
-                                    <Link href="/mech-it-easy-kits" className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-semibold bg-white dark:bg-slate-900 px-5 py-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:scale-105 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-600 cursor-pointer group">
-                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-500/20 text-blue-500">
-                                            <HiOutlineCube className="w-4 h-4" />
-                                        </div>
-                                        Mech It Easy Kits
-                                        <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                                    </Link>
-                                    <Link href="/mech-it-easy-labs" className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-semibold bg-white dark:bg-slate-900 px-5 py-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 transition hover:scale-105 hover:shadow-md hover:border-violet-300 dark:hover:border-violet-600 cursor-pointer group">
-                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-violet-100 dark:bg-violet-500/20 text-violet-500">
-                                            <HiOutlineCommandLine className="w-4 h-4" />
-                                        </div>
-                                        Mech It Easy Labs
-                                        <svg className="w-4 h-4 text-slate-400 group-hover:text-violet-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                                    </Link>
+                                <div className="pt-4 space-y-4">
+                                    <p className="flex items-center gap-3 text-4xl md:text-xl text-slate-600">
+                                        To Learn More Download our Brochure
+                                        <HiArrowDown size={20} className="text-blue-500 animate-bounce" />
+                                    </p>
+                                    <div className="flex justify-center lg:justify-start">
+                                        <a href="/Mech%20It%20Easy%20Brochure.pdf" download="Mech_It_Easy_Brochure.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-white font-bold bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-3.5 rounded-2xl shadow-lg shadow-emerald-500/25 border border-emerald-400/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-emerald-500/40 hover:border-emerald-300/40 cursor-pointer group">
+                                            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white transition-transform group-hover:animate-bounce">
+                                                <HiOutlineDocumentArrowDown className="w-5 h-5" />
+                                            </div>
+                                            Mech-It-Easy
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Video Column */}
-                            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2">
+                            <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2">
                                 <div className="relative w-full max-w-[340px] aspect-[9/16] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 bg-slate-900 group transform transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.4)]">
                                     <iframe
                                         className="absolute inset-0 w-full h-full scale-[1.05] transition-transform duration-700 group-hover:scale-110"
@@ -119,7 +118,7 @@ export default function WhoWeAreSection() {
                             </div>
                             <div className="space-y-6 text-base text-slate-500 dark:text-slate-400 leading-relaxed pt-2">
                                 <p>3D Printing has rapidly become one of the most exciting technologies of the modern world. From engineering and healthcare to architecture and education, its applications continue to grow every day.</p>
-                                <p>A 3D printer creates objects by building them layer by layer using materials like filament or resin.  <span className="text-slate-900 dark:text-white font-black underline decoration-blue-500 decoration-2 underline-offset-4 font-bold">additive manufacturing</span>this technology allows creators, students, and innovators to transform imagination into reality with precision and creativity.</p>
+                                <p>A 3D printer creates objects by building them layer by layer using materials like filament or resin.  <span className="text-slate-900 dark:text-white font-black decoration-blue-500 decoration-2 font-bold">additive manufacturing </span>this technology allows creators, students, and innovators to transform imagination into reality with precision and creativity.</p>
                             </div>
                         </div>
                     </div>
