@@ -175,7 +175,7 @@ export default function AboutUsPage() {
                             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">Our Team</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter mb-4">
-                            Meet the people behind <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-500">Mech-It-Easy</span>
+                            Meet Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-500'>Team</span>
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400">
                             A dedicated group of engineers, designers, and educators working together to revolutionize hands-on learning.
