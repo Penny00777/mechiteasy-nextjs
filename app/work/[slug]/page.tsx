@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { HiOutlineArrowLeft, HiOutlinePhoto, HiOutlineCube, HiOutlineSparkles } from 'react-icons/hi2';
 import ImageSlider from './ImageSlider';
 
-export default function WorkDetailsPage({ params }: { params: { slug: string } }) {
-    const { slug } = params;
+export default async function WorkDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
 
     const workData = {
         'functional-products': {
